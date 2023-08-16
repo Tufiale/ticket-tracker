@@ -1,5 +1,5 @@
 .employee__container {
-  border: 1px solid grey;
+  border: 1px solid red;
   border-radius: 5px;
   box-shadow: rgb(110, 133, 116) 5px 5px 5px;
   background-color: rgb(228, 228, 228);
@@ -7,11 +7,10 @@
   padding: 20px;
   font-family: monospace;
   font-size: 0.7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
   width: 200px;
   height: 220px;
+}
+
+.card {
+  padding: 10px;
 }
