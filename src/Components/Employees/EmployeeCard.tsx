@@ -1,13 +1,14 @@
 import "../../Components/Employees/EmployeeCard.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type teamProp = {
-  id?: number;
+  id: number;
   name: string;
   role: string;
 };
 
-const EmployeeCard = ({ name, role }: teamProp) => {
+const EmployeeCard = ({ name, role, id }: teamProp) => {
   const [ticket, setTicket] = useState(0);
 
   const ticketCountPlus = () => {
@@ -23,13 +24,16 @@ const EmployeeCard = ({ name, role }: teamProp) => {
   };
 
   return (
-    <div className="card">
+    <div key={id} className="card">
       <div className="employee__container">
         <h2>Name:{name}</h2>
         <button onClick={ticketCountPlus}>+</button>
         <p>Ticket: {ticket} </p>
         <button onClick={ticketCountMinus}>-</button>
         <h2>Role:{role}</h2>
+        <Link to={`/profile/${id}`} key={id}>
+          <h2>Click here for more info!</h2>
+        </Link>
       </div>
     </div>
   );
