@@ -1,4 +1,4 @@
-import TeamType from "../Types/Types";
+import TeamType from "../../Types/Types";
 import { useParams } from "react-router-dom";
 
 type profile = {
