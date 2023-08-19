@@ -20,7 +20,7 @@ const App = () => {
           element={<Profile employees={team} />}
         />
         <Route
-          path="/#/ticket-tracker"
+          path="/ticket-tracker"
           element={<TicketCardLayout teamMembers={team} />}
         />
       </Routes>

@@ -29,6 +29,7 @@ const TicketCardLayout = ({ teamMembers }: CardContainerProps) => {
         handleInput={handleInput}
         searchTerm={searchTerm}
       />
+
       <div>
         {filteredMembers.map((filteredTeamMember) => (
           <EmployeeCard employees={[filteredTeamMember]} />
