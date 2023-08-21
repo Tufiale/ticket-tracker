@@ -32,7 +32,7 @@ const TicketCardLayout = ({ teamMembers }: CardContainerProps) => {
 
       <div>
         {filteredMembers.map((filteredTeamMember) => (
-          <EmployeeCard employees={[filteredTeamMember]} />
+          <EmployeeCard employee={filteredTeamMember} />
         ))}
       </div>
     </div>

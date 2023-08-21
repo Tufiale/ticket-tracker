@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import TeamType from "../../Types/Types";
 
 type teamProp = {
-  employees: TeamType[];
+  employee: TeamType;
 };
 
-const EmployeeCard = ({ employees }: teamProp) => {
+const EmployeeCard = ({ employee }: teamProp) => {
   const [ticket, setTicket] = useState(0);
 
   const ticketCountPlus = () => {
@@ -24,20 +24,18 @@ const EmployeeCard = ({ employees }: teamProp) => {
 
   return (
     <>
-      {employees.map((employee) => (
-        <div key={employee.id} className="card">
-          <div className="employee__container">
-            <h2>Name:{employee.name}</h2>
-            <button onClick={ticketCountPlus}>+</button>
-            <p>Ticket: {ticket} </p>
-            <button onClick={ticketCountMinus}>-</button>
-            <h2>Role:{employee.role}</h2>
-            <Link to={`/profile/${employee.id}`} key={employee.id}>
-              <h2>Click here for more info!</h2>
-            </Link>
-          </div>
+      <div key={employee.id} className="card">
+        <div className="employee__container">
+          <h2>Name:{employee.name}</h2>
+          <button onClick={ticketCountPlus}>+</button>
+          <p>Ticket: {ticket} </p>
+          <button onClick={ticketCountMinus}>-</button>
+          <h2>Role:{employee.role}</h2>
+          <Link to={`/profile/${employee.id}`} key={employee.id}>
+            <h2>Click here for more info!</h2>
+          </Link>
         </div>
-      ))}
+      </div>
     </>
   );
 };

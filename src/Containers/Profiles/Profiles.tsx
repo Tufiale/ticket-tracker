@@ -1,3 +1,4 @@
+import "../../Containers/Profiles/Profiles.scss";
 import TeamType from "../../Types/Types";
 import { useParams } from "react-router-dom";
 
@@ -22,7 +23,11 @@ const Profile = ({ employees }: profile) => {
         <li>Tech Stack:{employee?.profile.techstack.join(",")}</li>
       </ul>
       <div>
-        <img src={employee?.profile.profilePicture} alt="Profile Picture" />
+        <img
+          className="image"
+          src={employee?.profile.profilePicture}
+          alt="Profile Picture"
+        />
       </div>
     </section>
   );

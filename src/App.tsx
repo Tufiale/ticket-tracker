@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.scss";
 import team from "./data/Data";
-import EmployeeCard from "./Components/Employees/EmployeeCard";
 import Nav from "./Components/Nav/Nav";
 import Profile from "./Containers/Profiles/Profiles";
 import TicketCardLayout from "./Containers/Tickets/Tickets";
+import Home from "./Containers/Home/Home";
 
 const App = () => {
+  console.log(team);
   return (
     <>
       <section className="app">
@@ -14,7 +15,7 @@ const App = () => {
         <h1 className="app__title">Ticket Tracker</h1>
       </section>
       <Routes>
-        <Route path="/" element={<EmployeeCard employees={team} />} />
+        <Route path="/" element={<Home teams={team} />} />
         <Route
           path="/profile/:employeeId"
           element={<Profile employees={team} />}
