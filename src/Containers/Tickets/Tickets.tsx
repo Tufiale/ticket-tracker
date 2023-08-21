@@ -25,7 +25,7 @@ const TicketCardLayout = ({ teamMembers }: CardContainerProps) => {
     <div className="team-card">
       <SearchBox
         key="SearchBox"
-        label="Team Members"
+        label="Search Tickets Here:"
         handleInput={handleInput}
         searchTerm={searchTerm}
       />
